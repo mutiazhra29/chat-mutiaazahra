@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import LollipopIcon from '@/components/LollipopIcon';
 
 interface Message {
   id: string;
@@ -26,14 +27,14 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
       {messages.length === 0 ? (
         <div className="flex items-center justify-center h-full">
           <div className="text-center">
-            <div className="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i className="fas fa-robot text-3xl text-blue-600 dark:text-blue-400"></i>
+            <div className="bg-[#ffe4ed] dark:bg-[#493044] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-[#bc6586] dark:text-[#ffc0d6]">
+              <LollipopIcon className="w-9 h-9" />
             </div>
-            <h2 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Selamat datang!</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-sm">
-              Halloo.. Saya adalah Sontoloyo AI<br>
+            <h2 className="text-xl font-semibold mb-2 text-[#493743] dark:text-[#fff1f4]">Selamat datang!</h2>
+            <p className="text-[#806b78] dark:text-[#d4c2cf] max-w-sm">
+              Halloo.. Saya About Mutia<br>
               </br>
-              Anda bisa bertanya tentang apapun terkait informasi yang ada di dalam konten blog saya!
+              Tanyakan apa saja tentang Mutia. Aku akan mencoba membantu!
             </p>
           </div>
         </div>
@@ -46,8 +47,8 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
           >
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center text-white shrink-0 ${message.role === 'user'
-                ? 'bg-slate-700 dark:bg-slate-600'
-                : 'bg-blue-600 dark:bg-blue-700'
+                ? 'bg-[#806b78] dark:bg-[#695265]'
+                : 'bg-[#e889aa] dark:bg-[#ae6386]'
                 }`}
             >
               <i
@@ -57,8 +58,8 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
             </div>
             <div
               className={`max-w-[80%] px-4 py-3 rounded-2xl ${message.role === 'user'
-                ? 'bg-blue-600 text-white rounded-tr-none'
-                : 'bg-white dark:bg-slate-800 text-gray-900 dark:text-gray-100 rounded-tl-none border border-gray-200 dark:border-slate-700'
+                ? 'bg-[#d9789c] dark:bg-[#a9597c] text-white rounded-tr-none'
+                : 'bg-white dark:bg-[#302432] text-[#493743] dark:text-[#fff1f4] rounded-tl-none border border-[#f1dce4] dark:border-[#503c4e]'
                 }`}
             >
               <div className="text-sm leading-relaxed whitespace-pre-wrap break-words">
@@ -99,8 +100,8 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
               </div>
               <p
                 className={`text-xs mt-2 ${message.role === 'user'
-                  ? 'text-blue-100'
-                  : 'text-gray-500 dark:text-gray-400'
+                  ? 'text-pink-100'
+                  : 'text-[#9b8391] dark:text-[#c7aebe]'
                   }`}
               >
                 {new Date(message.timestamp).toLocaleTimeString('id-ID', {

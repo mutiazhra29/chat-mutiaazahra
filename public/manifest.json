@@ -1,13 +1,13 @@
 {
-  "name": "Sontoloyo AI",
-  "short_name": "Sontoloyo AI",
-  "description": "Sontoloyo AI - AI Chatbot untuk blog adi-muhamad.my.id",
+  "name": "About Mutia",
+  "short_name": "About Mutia",
+  "description": "Teman ngobrol AI yang manis dan ceria.",
   "display": "standalone",
   "start_url": "/",
   "scope": "/",
   "orientation": "portrait",
-  "theme_color": "#2563eb",
-  "background_color": "#0f172a",
+  "theme_color": "#f3a6c1",
+  "background_color": "#fff8f1",
   "categories": ["productivity", "utilities"],
   "icons": [
     {

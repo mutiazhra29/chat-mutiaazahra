@@ -52,7 +52,7 @@ export default function ChatInput({
 
 
   return (
-    <div className="border-t border-gray-200 dark:border-slate-800 pt-4">
+    <div className="border-t border-[#f0dce4] dark:border-[#493748] pt-4">
       <div className="relative flex items-end gap-3">
         <textarea
           ref={textareaRef}
@@ -64,12 +64,12 @@ export default function ChatInput({
           placeholder="Tanya apa aja, asal jangan tanya kapan kiamat"
           disabled={isLoading}
           rows={1}
-          className="flex-1 p-3 text-sm md:text-base rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 resize-none max-h-[120px] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 p-3 text-sm md:text-base rounded-xl border border-[#ecd2dd] dark:border-[#594153] bg-white/80 dark:bg-[#302432] text-[#493743] dark:text-[#fff1f4] placeholder-[#aa929f] dark:placeholder-[#b59eaf] focus:outline-none focus:ring-2 focus:ring-[#e889aa] dark:focus:ring-[#ca7b9d] resize-none max-h-[120px] disabled:opacity-50 disabled:cursor-not-allowed"
         />
         <button
           onClick={handleSend}
           disabled={!input.trim() || isLoading}
-          className="px-4 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="px-4 py-3 bg-[#d9789c] hover:bg-[#c8668b] dark:bg-[#aa5b7c] dark:hover:bg-[#bd6b8d] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
         >
           {isLoading ? (
             <i className="fas fa-spinner animate-spin"></i>
@@ -78,20 +78,10 @@ export default function ChatInput({
           )}
         </button>
       </div>
-      <div className="text-xs text-gray-500 dark:text-gray-400 mt-6 text-center space-y-1">
-        <p>“SontoloyoAI is just an AI, so it can make mistakes.”</p>
+      <div className="text-xs text-[#9b8391] dark:text-[#c7aebe] mt-6 text-center space-y-1">
+        <p>“About Mutia adalah AI dan bisa saja membuat kesalahan.”</p>
         <p>© 2026 Hak Cipta Dilindungi.</p>
-        <p>
-          Developed by{' '}
-          <a
-            href="https://adi-muhamad.my.id"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors"
-          >
-            adi-muhamad.my.id
-          </a>
-        </p>
+        <p>Dibuat dengan manis untuk menemani harimu.</p>
       </div>
     </div>
   );
